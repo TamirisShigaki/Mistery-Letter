@@ -1,10 +1,21 @@
 window.onload = function () {
-  //! Requisito 3
+  //! Requisito 3, 5 e 16
 
   let botaoCarta = document.querySelector('#criar-carta');
   botaoCarta.addEventListener('click', geraCarta);
   let inputCarta = document.querySelector('#carta-texto');
   let pTextoGerado = document.querySelector('#carta-gerada');
+
+  let estilo = ['newspaper', 'magazine1', 'magazine2'];
+  let tamanho = ['medium', 'big', 'reallybig'];
+  let rotacao = ['rotateleft', 'rotateright'];
+  let inclinacao = ['skewleft', 'skewright'];
+
+  function styleClass(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
 
   function geraCarta() {
     let palavra = inputCarta.value.split(' ');
@@ -16,10 +27,16 @@ window.onload = function () {
       for (let i = 0; i < palavra.length; i += 1) {
         let span = document.createElement('span');
         span.innerText = palavra[i];
+        span.classList.add(
+          estilo[styleClass(0, 3)],
+          tamanho[styleClass(0, 3)],
+          rotacao[styleClass(0, 2)],
+          inclinacao[styleClass(0, 2)]
+        );
         pTextoGerado.appendChild(span);
       }
     }
   }
 
-  //* requisito 4 foi automatico
+  //* requisito 4 foi automático
 };

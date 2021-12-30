@@ -43,19 +43,23 @@
 /* Requisito 12 */
 .rotateleft {
   transform: rotate(-5deg);
+  display: inline-block;
 }
 
 /* Requisito 13 */
 .rotateright {
   transform: rotate(5deg);
+  display: inline-block;
 }
 
 /* Requisito 14 */
 .skewleft {
   transform: skewX(10deg);
+  display: inline-block;
 }
 
 /* Requisito 15 */
 .skewright {
   transform: skewX(-10deg);
+  display: inline-block;
 }
