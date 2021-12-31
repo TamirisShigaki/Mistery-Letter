@@ -39,4 +39,19 @@ window.onload = function () {
   }
 
   //* requisito 4 foi automático
+
+  //! Requisito 17
+
+  let mudarPalavra = document.querySelector('#carta-gerada');
+  mudarPalavra.addEventListener('click', mudarEstilo);
+
+  function mudarEstilo(evento) {
+    evento.target.removeAttribute('class');
+    evento.target.classList.add(
+      estilo[styleClass(0, 3)],
+      tamanho[styleClass(0, 3)],
+      rotacao[styleClass(0, 2)],
+      inclinacao[styleClass(0, 2)]
+    );
+  }
 };
