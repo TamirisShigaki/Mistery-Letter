@@ -1,5 +1,5 @@
 window.onload = function () {
-  //! Requisito 3, 5 e 16
+  //! Requisito 3, 5, 16 e 18
 
   let botaoCarta = document.querySelector('#criar-carta');
   botaoCarta.addEventListener('click', geraCarta);
@@ -24,6 +24,8 @@ window.onload = function () {
       pTextoGerado.innerText = 'Por favor, digite o conteúdo da carta.';
     } else {
       pTextoGerado.innerText = '';
+      let contPalavras = document.querySelector('#carta-contador');
+      contPalavras.innerText = palavra.length;
       for (let i = 0; i < palavra.length; i += 1) {
         let span = document.createElement('span');
         span.innerText = palavra[i];
