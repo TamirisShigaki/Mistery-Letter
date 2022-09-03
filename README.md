@@ -7,7 +7,7 @@ Projeto pessoal desenvolvido na Trybe, onde tivemos que desenvolver uma página 
 ## Habilidades Desenvolvidas
 
 * Usei a API DOM para acessar elementos HTML
-* Reaji às interações do usuário usando ouvintes de eventos
+* Reagi às interações do usuário usando ouvintes de eventos
 
 ## Ferramentas
 
